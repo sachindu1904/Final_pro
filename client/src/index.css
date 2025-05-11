@@ -1,0 +1,96 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 262 48% 54%; /* Purple */
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 199 89% 48%; /* Blue */
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 262 48% 54%;
+
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply px-4 mx-auto max-w-7xl sm:px-6 lg:px-8;
+  }
+
+  .btn-primary {
+    @apply px-6 py-3 text-white transition-all rounded-lg bg-eventuraa-purple hover:bg-eventuraa-darkPurple focus:ring-2 focus:ring-eventuraa-purple focus:ring-offset-2;
+  }
+  
+  .btn-secondary {
+    @apply px-6 py-3 transition-all rounded-lg bg-eventuraa-softPurple text-eventuraa-purple hover:bg-eventuraa-purple hover:text-white focus:ring-2 focus:ring-eventuraa-purple focus:ring-offset-2;
+  }
+  
+  .btn-accent {
+    @apply px-6 py-3 text-white transition-all rounded-lg bg-eventuraa-blue hover:bg-blue-600 focus:ring-2 focus:ring-eventuraa-blue focus:ring-offset-2;
+  }
+  
+  .emergency-btn {
+    @apply px-6 py-3 text-white transition-all rounded-lg bg-red-600 hover:bg-red-700 focus:ring-2 focus:ring-red-500 focus:ring-offset-2 flex items-center justify-center;
+  }
+  
+  .nav-link {
+    @apply relative text-gray-700 transition-colors hover:text-eventuraa-purple after:absolute after:left-0 after:bottom-0 after:h-0.5 after:w-0 after:bg-eventuraa-purple after:transition-all hover:after:w-full;
+  }
+  
+  .card-shadow {
+    @apply shadow-lg hover:shadow-xl transition-all duration-200;
+  }
+  
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold font-display text-gray-900 mb-4;
+  }
+  
+  .section-subtitle {
+    @apply text-lg md:text-xl text-gray-600 mb-10 max-w-2xl mx-auto;
+  }
+
+  .feature-card {
+    @apply p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition-all border border-gray-100;
+  }
+}
